@@ -4,6 +4,9 @@
     @forelse($products as $product)
         <h2>{{ $product->name }}</h2>
         <p>{{ $product->type }}</p>
+        @auth
+            <button>Buy Product</button>
+        @endauth
     @empty
         <p>No products</p>
     @endforelse
