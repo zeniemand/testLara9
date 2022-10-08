@@ -2,7 +2,9 @@
     <h1>Products index</h1>
 
     @auth
-        <a href="">Create</a>
+        @if(auth()->user()->is_admin)
+            <a href="">Create</a>
+        @endif
     @endauth
 
     @forelse($products as $product)
