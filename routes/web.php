@@ -24,7 +24,8 @@ Route::get('/about', function () {
 });
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/create', [ProductController::class, 'index'])->middleware('admin')->name('products.create');
+Route::get('/products/create', [ProductController::class, 'create'])->middleware('admin')->name('products.create');
+Route::post('/products', [ProductController::class, 'store'])->middleware('admin')->name('products.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

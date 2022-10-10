@@ -3,7 +3,7 @@
 
     @auth
         @if(auth()->user()->is_admin)
-            <a href="">Create</a>
+            <a href="/products/create">Create</a>
         @endif
     @endauth
 
