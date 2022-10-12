@@ -45,4 +45,10 @@ class ProductController extends Controller
         return to_route('products.index');
     }
 
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        return to_route('products.index');
+    }
+
 }
